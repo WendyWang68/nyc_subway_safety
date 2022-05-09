@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet"type="text/css"href="style.css">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body id="page2">
+  <div class="parallax">
+  <div class="part1">
+    <ul>
+     <li><a href="index.html">Safety Issues in NYC Subway</a></li>
+     <li><a href="subway1.html">Safety Tips</a></li>
+     <li><a href="subway.html">Opinion Board</a></li>
+    </ul>
+    <h1>Opinion Board</h1>
+    <h2>Feel free to share your own experiences or concerns about the safety issue of NYC subway!</h2>
+    <br>
+    <div class="myDiv">
+    <p>As a college student living in New York City, taking the train to commute to school campus is an unavoidable part of my life. I always want to explore the amazing city on the weekends with friends. But oftentimes due to my worries about the safety of the train, I postponed my plans. It is like an unpredictable adventure every time I leave my apartment. In addition, I always avoid getting home late at night by taking the train. I cannot feel secure having dinner at restaurants when the dark night starts to fall, which is supposed to be an enjoyable dinner time with my friends. I feel limited and vulnerable in my life when the necessary commuting way is not anymore safe. - Wendy Wang </p>
+    <br>
+    <p>I live in Brooklyn and I need to commute between NYU Manhattan and Brooklyn campus for classes. I usually take the school bus but it is relatively slow. The school bus is not always on-time. Taking an Uber is just so expensive for me. Subway is the fastest and most convenient way. It is impossible for me to avoid taking the subway. Commuting is a big problem for me now, and it even distracts my studies since I need to worry about my safety while commuting on the subway. I am mentally illed because of the subway safety issues. - Amber Li </p>
+    </div>
+    <br>
+    <section id="app">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="comment">
+          <p v-for="items in item" v-text="items"></p>
+            </div>
+            </div>
+            </div>
+        <div class="row">
+          <div class="col-6">
+        <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+            <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Your Opinion</button>
+          </div>
+        </div>
+      </div>
+    </section>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="script.js" charset="utf-8"></script>
+    <br>
+    <br>
+  </div>
+</div>
+  </body>
+</html>
